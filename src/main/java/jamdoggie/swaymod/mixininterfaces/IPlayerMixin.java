@@ -1,9 +1,5 @@
 package jamdoggie.swaymod.mixininterfaces;
 
-import net.minecraft.client.entity.player.EntityPlayerSP;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.gen.Accessor;
-
 public interface IPlayerMixin
 {
 	float _getRenderArmPitch();

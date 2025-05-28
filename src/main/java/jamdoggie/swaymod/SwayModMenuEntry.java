@@ -2,8 +2,8 @@ package jamdoggie.swaymod;
 
 import io.github.prospector.modmenu.api.ModMenuApi;
 import io.github.prospector.modmenu.util.TriConsumer;
-import jamdoggie.swaymod.options.GuiOptionsPageSway;
-import net.minecraft.client.gui.GuiScreen;
+import jamdoggie.swaymod.options.ScreenOptionsPageSway;
+import net.minecraft.client.gui.Screen;
 
 import java.util.function.Function;
 
@@ -16,9 +16,9 @@ public class SwayModMenuEntry implements ModMenuApi
 	}
 
 	@Override
-	public Function<GuiScreen, ? extends GuiScreen> getConfigScreenFactory()
+	public Function<Screen, ? extends Screen> getConfigScreenFactory()
 	{
-		return (GuiOptionsPageSway::swayOptionsPage);
+		return (ScreenOptionsPageSway::swayOptionsPage);
 	}
 
 	@Override

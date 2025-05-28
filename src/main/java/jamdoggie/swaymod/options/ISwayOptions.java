@@ -1,11 +1,11 @@
 package jamdoggie.swaymod.options;
 
-import net.minecraft.client.option.BooleanOption;
-import net.minecraft.client.option.FloatOption;
+import net.minecraft.client.option.OptionBoolean;
+import net.minecraft.client.option.OptionFloat;
 
 public interface ISwayOptions
 {
-	public BooleanOption enableSway();
-	public BooleanOption enableVerticalBobSway();
-	public FloatOption swayMultiplier();
+	public OptionBoolean enableSway();
+	public OptionBoolean enableVerticalBobSway();
+	public OptionFloat swayMultiplier();
 }

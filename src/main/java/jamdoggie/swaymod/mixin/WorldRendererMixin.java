@@ -3,15 +3,12 @@ package jamdoggie.swaymod.mixin;
 import jamdoggie.swaymod.SwayMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.render.WorldRenderer;
-import net.minecraft.client.render.camera.EntityCamera;
-import net.minecraft.core.entity.player.EntityPlayer;
-import net.minecraft.core.util.helper.MathHelper;
+import net.minecraft.core.entity.player.Player;
 import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
@@ -28,7 +25,7 @@ public class WorldRendererMixin
 			shift = At.Shift.AFTER,
 			ordinal = 1),
 		locals = LocalCapture.CAPTURE_FAILHARD)
-	private void renderHand(float partialTick, CallbackInfo ci, EntityPlayer player, float walkDist, float cameraVel, float cameraPitch)
+	private void renderHand(float partialTick, CallbackInfo ci, Player player, float walkDist, float cameraVel, float cameraPitch)
 	{
 		if (SwayMod.options != null && SwayMod.options.enableVerticalBobSway().value)
 		{

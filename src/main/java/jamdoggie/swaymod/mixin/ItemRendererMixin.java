@@ -3,9 +3,8 @@ package jamdoggie.swaymod.mixin;
 import jamdoggie.swaymod.SwayMod;
 import jamdoggie.swaymod.mixininterfaces.IPlayerMixin;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.player.EntityPlayerSP;
+import net.minecraft.client.entity.player.PlayerLocal;
 import net.minecraft.client.render.ItemRenderer;
-import net.minecraft.core.util.helper.MathHelper;
 import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -27,7 +26,7 @@ public class ItemRendererMixin
 			ordinal = 1))
 	private void renderItemInFirstPerson(float partialTick, CallbackInfo ci)
 	{
-		EntityPlayerSP player = this.mc.thePlayer;
+		PlayerLocal player = this.mc.thePlayer;
 		IPlayerMixin playerMixin = (IPlayerMixin)player;
 
 		if (SwayMod.options == null)

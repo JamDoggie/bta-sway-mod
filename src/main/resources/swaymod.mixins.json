@@ -9,7 +9,7 @@
     "client": [
       "WorldRendererMixin",
       "ItemRendererMixin",
-      "EntityPlayerSPMixin",
+      "PlayerLocalMixin",
       "SwaySettingsMixin",
       "MinecraftMixin"
     ],
